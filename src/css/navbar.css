@@ -1,0 +1,50 @@
+.wjs-navbar {
+	position: relative;
+}
+.wjs-navbar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height: 28px;
+}
+.wjs-navbar li img.wjs-icon {
+	vertical-align: middle;
+	line-height: 20px;
+	margin-right: 5px;
+}
+.wjs-navbar li.wjs-navbar-layer1 {
+	margin: 2px;
+	text-align: center;
+	line-height: 26px;
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	white-space: nowrap;
+	width: 130px;
+}
+.wjs-navbar li.wjs-navbar-layer1 {
+	display: block;
+	float: left;
+}
+.wjs-navbar li.wjs-navbar-layer1:hover {
+	border-color: silver;
+	background-color: gainsboro;
+}
+.wjs-navbar ul.wjs-navbar-sub {
+	display: none;
+	padding-top: 5px;
+	z-index: 5000;
+	width: auto;
+}
+.wjs-navbar ul.wjs-navbar-sub li {
+	text-align: left;
+	padding: 2px 5px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	white-space: nowrap;
+	line-height: 26px;
+}
+.wjs-navbar ul.wjs-navbar-sub li:hover {
+	background-color: whitesmoke;
+}

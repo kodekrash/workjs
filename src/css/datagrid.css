@@ -1,0 +1,51 @@
+.wjs-datagrid {
+	position: relative;
+	margin: 10px;
+}
+.wjs-datagrid table {
+	border-collapse: collapse;
+	border: 1px solid gainsboro;
+	width: 100%;
+}
+.wjs-datagrid th,
+.wjs-datagrid td {
+	vertical-align: middle;
+}
+.wjs-datagrid thead {
+	background-color: gainsboro;
+}
+.wjs-datagrid thead th {
+	text-align: left;
+	border: 1px solid gainsboro;
+	padding: 2px 5px;
+}
+.wjs-datagrid tbody tr {
+	line-height: 18px;
+}
+.wjs-datagrid tbody tr:hover,
+.wjs-datagrid tbody tr.wjs-datagrid-stripe:hover {
+	background-color: gainsboro;
+	color: black;
+}
+.wjs-datagrid tbody tr.wjs-datagrid-stripe {
+	background-color: whitesmoke;
+}
+.wjs-datagrid tbody td {
+	border: 1px solid gainsboro;
+	padding: 2px 5px;
+}
+.wjs-datagrid tfoot {
+	line-height: 24px;
+	background-color: gainsboro;
+}
+.wjs-datagrid div.wjs-datagrid-info {
+	float: left;
+	max-width: 250px;
+	white-space: nowrap;
+	margin: 2px 5px;
+	line-height: 28px;
+}
+.wjs-datagrid div.wjs-datagrid-ctrl {
+	float: right;
+	margin: 2px 5px;
+}

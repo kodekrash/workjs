@@ -1,0 +1,221 @@
+.wjs-tabs {
+	position: absolute;
+}
+.wjs-tabs ul.wjs-tabs-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.wjs-tabs-tab1,
+.wjs-tabs-tab2 {
+	z-index: 500;
+}
+.wjs-tabs li.wjs-tabs-item {
+	position: relative;
+	border: 1px solid gainsboro;
+	background-color: gainsboro;
+	border-bottom-color: #347bb1;
+	cursor: pointer;
+	color: black;
+	line-height: 20px;
+	padding: 5px 10px;
+}
+.wjs-tabs li.wjs-tabs-item:hover {
+	background-color: gainsboro;
+	color: black;
+}
+.wjs-tabs div.wjs-tabs-location-top li.wjs-tabs-item {
+	float: left;
+	display: block;
+	margin: 0 5px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.wjs-tabs div.wjs-tabs-location-top li.wjs-tabs-item-active {
+	background-color: #347bb1;
+	border-color: #347bb1;
+	color: white;
+}
+.wjs-tabs div.wjs-tabs-location-bottom li.wjs-tabs-item {
+	float: left;
+	display: block;
+	margin: 0 5px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-color: silver;
+}
+.wjs-tabs div.wjs-tabs-location-bottom li.wjs-tabs-item-active {
+	background-color: white;
+	border-color: silver;
+	border-top-color: white;
+	color: black;
+}
+.wjs-tabs div.wjs-tabs-location-left li.wjs-tabs-item {
+	margin: 5px 0;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-right-color: silver;
+}
+.wjs-tabs div.wjs-tabs-location-left li.wjs-tabs-item-active {
+	background-color: white;
+	border-color: silver;
+	border-right-color: white;
+	color: black;
+}
+.wjs-tabs div.wjs-tabs-location-right li.wjs-tabs-item {
+	margin: 5px 0;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-left-color: silver;
+}
+.wjs-tabs div.wjs-tabs-location-right li.wjs-tabs-item-active {
+	background-color: white;
+	border-color: silver;
+	border-left-color: white;
+	color: black;
+}
+.wjs-tabs li.wjs-tabs-item:hover {
+	background-color: silver;
+}
+.wjs-tabs div.wjs-tabs-panels {
+	border: 1px solid silver;
+	border-top: 2px solid #347bb1;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 400;
+}
+.wjs-tabs div.wjs-tabs-item-body {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.wjs-tabs div.wjs-tabs-location-top {
+	position: absolute;
+	top: 0;
+	height: 30px;
+	left: 0;
+	right: 0;
+}
+.wjs-tabs div.wjs-tabs-location-bottom {
+	position: absolute;
+	bottom: 0;
+	height: 30px;
+	left: 0;
+	right: 0;
+}
+.wjs-tabs div.wjs-tabs-location-right {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 150px;
+	right: 0;
+}
+.wjs-tabs div.wjs-tabs-location-left {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 150px;
+	left: 0;
+}
+.wjs-tabs div.wjs-tabs-panels {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.wjs-tabs div.wjs-tabs-align-left {
+	float: left;
+}
+.wjs-tabs div.wjs-tabs-align-right ul {
+	float: right;
+}
+.wjs-tabs div.wjs-tabs-align-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.wjs-tabs div.wjs-tabs-align-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.wjs-tabs li.wjs-tabs-item-icon {
+	padding-right: 22px;
+}
+.wjs-tabs li.wjs-tabs-item img.wjs-action-icon {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+}
+.wjs-tabs div.wjs-tabs-location-left li.wjs-tabs-item div.wjs-tabs-caption,
+.wjs-tabs div.wjs-tabs-location-right li.wjs-tabs-item div.wjs-tabs-caption {
+	width: 120px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.wjs-tabs div.wjs-tabs-location-top li.wjs-tabs-item div.wjs-tabs-caption,
+.wjs-tabs div.wjs-tabs-location-bottom li.wjs-tabs-item div.wjs-tabs-caption {
+	white-space: nowrap;
+}
+
+/** alt mode **/
+.wjs-tabs-alt ul.wjs-tabs-list {
+	list-style: none;
+	margin: 5px;
+	padding: 0;
+}
+.wjs-tabs-alt li.wjs-tabs-item {
+	position: relative;
+	border: 1px solid gainsboro;
+	border-radius: 0px;
+	background-color: white;
+	cursor: pointer;
+	color: gray;
+	line-height: 20px;
+	padding: 5px 10px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-right {
+	width: 200px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-left {
+	width: 200px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-left li.wjs-tabs-item {
+	margin: 5px 0;
+	border-radius: 0px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-left li.wjs-tabs-item-active {
+	background-color: gainsboro;
+	border: 1px solid gainsboro;
+	color: black;
+	border-radius: 0px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-right li.wjs-tabs-item {
+	margin: 5px 0;
+	border-radius: 0px;
+}
+.wjs-tabs-alt div.wjs-tabs-location-right li.wjs-tabs-item-active {
+	background-color: gainsboro;
+	border: 1px solid gainsboro;
+	color: black;
+	border-radius: 0px;
+}
+.wjs-tabs-alt div.wjs-tabs-panels {
+	border: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.wjs-tabs-alt div.wjs-tabs-location-left li.wjs-tabs-item div.wjs-tabs-caption,
+.wjs-tabs-alt div.wjs-tabs-location-right li.wjs-tabs-item div.wjs-tabs-caption {
+	width: 170px;
+}

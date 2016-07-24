@@ -1,0 +1,31 @@
+.wjs-autocomplete {
+	z-index: 3000;
+	background-color: whitesmoke;
+	border: 1px solid transparent;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 3px 3px 3px #cdcdcd;
+	padding: 3px;
+	max-height: 160px;
+	overflow: auto;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.wjs-autocomplete ul.wjs-autocomplete-list {
+	list-style: none;
+	padding: 5px 0 0 0;
+	margin: 0;
+}
+.wjs-autocomplete li.wjs-autocomplete-item {
+	font-size: 9pt;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	padding: 2px;
+	margin: 2px;
+}
+.wjs-autocomplete li.wjs-autocomplete-item:hover {
+	background-color: gainsboro;
+}
