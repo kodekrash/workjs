@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WorkJS</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="en_us" />
+		<link rel="stylesheet" type="text/css" href="./workjs/workjs.css" />
+		<style type="text/css">
+			body {
+				background-color: whitesmoke;
+				margin: 0;
+				padding: 0;
+			}
+			#demo-list {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 120px;
+				border: 1px solid gray;
+				border-radius: 8px;
+				background-color: white;
+			}
+			#demo-list li {
+				line-height: 20px;
+				margin: 5px;
+				padding: 2px 5px;
+				cursor: pointer;
+				border: 1px solid transparent;
+			}
+			#demo-list li._sel {
+				background-color: gainsboro;
+				border-color: silver;
+				border-radius: 8px;
+				color: black;
+			}
+			#demo-container {
+				position: absolute;
+				top: 10px;
+				left: 145px;
+				right: 10px;
+				bottom: 10px;
+				overflow: auto;
+				border: 1px solid gray;
+				border-radius: 8px;
+				background-color: white;
+			}
+			#demo-info {
+				position: absolute;
+				bottom: 10px;
+				left: 0;
+				width: 140px;
+				line-height: 16px;
+				text-align: center;
+				font-size: 9pt;
+				color: gray;
+			}
+			#demo-info a {
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 11pt;
+			}
+			p.ghl {
+				margin-bottom: 20px;
+			}
+			h1.error {
+				padding: 10px;
+				background-color: rgba(255,0,0,0.4);
+				color: #800000;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="demo-list">
+			<p><small>Some demos are not fully functional on Github Pages.</small></p>
+			<ul>
+				<li id="accordion">Accordion</li>
+				<li id="autocomplete">Autocomplete</li>
+				<li id="buttonbar">Button Bar</li>
+				<li id="datagrid">Data Grid</li>
+				<li id="dataview">Data View</li>
+				<li id="dialog">Dialog</li>
+				<li id="navbar">Navigation Bar</li>
+				<li id="notifier">Notifier</li>
+				<li id="panelbar">Panel Bar</li>
+				<li id="spinner">Spinner</li>
+				<li id="stack">Stack</li>
+				<li id="tabs">Tabs</li>
+				<li id="timeline">Timeline</li>
+				<li id="tree">Tree</li>
+			</ul>
+		</div>
+		<div id="demo-container"></div>
+		<div id="demo-info">
+			<p class="ghl"><a href="https://github.com/kodekrash/workjs">View on GitHub</a></p>
+			<p>&copy; 2011 3Source, Inc.</p>
+		</div>
+		<script type="text/javascript" src="./jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="./workjs/workjs.js"></script>
+		<script type="text/javascript">
+			$( function() {
+				WorkJS.init();
+				$('#demo-list li').click( function() {
+					$('#demo-list li').removeClass( '_sel' );
+					$(this).addClass( '_sel' );
+					$('#demo-container').load( 'demo/' + $(this).prop('id') + '.html' );
+				} );
+			} );
+		</script>
+	</body>
+</html>

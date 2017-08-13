@@ -1,0 +1,57 @@
+<div id="timeline-container1"></div>
+<div id="timeline-container2"></div>
+<style type="text/css">
+	#timeline-container1,
+	#timeline-container2 {
+		margin: 20px;
+		padding: 5px;
+		max-height: 380px;
+		overflow: auto;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	var T1 = '';
+	var T2 = '';
+
+	$.get( 'demo/data/usstates.json', function(d) {
+		if( d && d.length > 0 ) {
+			var rs = [];
+			for( var i = 0; i < d.length; i ++ ) {
+				rs.push( { uri: d[i].abbr.toLowerCase(), caption: d[i].name, begin: d[i].date } );
+			}
+			T1 = new WorkJS.widget.timeline( {
+				target: 'timeline-container1',
+				caption: 'Statehood 1776 to now',
+				begin: new Date( 1776, 6, 4 ),
+				items: rs,
+				mode: 'single',
+				callback: function(e) {
+					console.log( e.data.item );
+				}
+			} );
+		}
+	}, 'json' );
+
+	$.get( 'demo/data/invasionofpoland.json', function(d) {
+		if( d && d.length > 0 ) {
+			var rs = [];
+			for( var i = 0; i < d.length; i ++ ) {
+				rs.push( d[i] );
+			}
+			T2 = new WorkJS.widget.timeline( {
+				target: 'timeline-container2',
+				caption: 'World War II - Invasion of Poland',
+				begin: new Date('Sep 1, 1939'),
+				end: new Date('Oct 5, 1939 23:59:59'),
+				items: rs,
+				callback: function(e) {
+					console.log( e.data.item );
+				}
+			} );
+		}
+	}, 'json' );
+
+} );
+</script>

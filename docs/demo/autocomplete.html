@@ -1,0 +1,65 @@
+<p>
+	<label for="autocomplete-container">Input</label>
+	<input type="text" id="autocomplete-container" for="value-field" size="30" />
+</p>
+<p>
+	<label for="value-field">Selected Value</label>
+	<input type="text" id="value-field" value="" disabled="disabled" size="10" />
+</p>
+<p>&nbsp;</p>
+<p>
+	<label for="autocomplete-container1">Input</label>
+	<input type="text" id="autocomplete-container1" for="value-field1" size="30" />
+</p>
+<p>
+	<label for="value-field1">Selected Value</label>
+	<input type="text" id="value-field1" value="" disabled="disabled" size="10" />
+</p>
+<style type="text/css">
+	label {
+		display: block;
+		float: left;
+		width: 90px;
+		font-size: 8pt;
+		line-height: 22px;
+	}
+	input[type="text"],
+	textarea {
+		border: 1px solid gainsboro;
+		border-radius: 6px;
+		padding: 2px 4px;
+		font-size: 10pt;
+	}
+	input[type="text"]:focus,
+	textarea:focus {
+		border-color: gray;
+		background-color: whitesmoke;
+	}
+	.wjs-autocomplete {
+		border: 1px solid gray;
+		border-top: transparent;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	var A1 = new WorkJS.widget.autocomplete( {
+		target: 'autocomplete-container',
+		request: {
+			module: 'test',
+			method: 'autocomplete',
+			param: 'query'
+		}
+	} );
+	
+	var A2 = new WorkJS.widget.autocomplete( {
+		target: 'autocomplete-container1',
+		request: {
+			module: 'test',
+			method: 'autocomplete',
+			param: 'query'
+		}
+	} );
+
+} );
+</script>

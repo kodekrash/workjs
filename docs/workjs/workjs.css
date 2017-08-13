@@ -1,0 +1,23 @@
+/**
+ * @copyright 2011 3Source, Inc. <www.3source.ca>
+ * @author James Linden <jl@eidix.com>
+ * @package WorkJS
+ */
+
+@import './css/reset.css';
+@import './css/global.css';
+
+@import './css/accordion.css';
+@import './css/autocomplete.css';
+@import './css/buttonbar.css';
+@import './css/datagrid.css';
+@import './css/dataview.css';
+@import './css/dialog.css';
+@import './css/navbar.css';
+@import './css/notifier.css';
+@import './css/panelbar.css';
+@import './css/spinner.css';
+@import './css/stack.css';
+@import './css/tabs.css';
+@import './css/timeline.css';
+@import './css/tree.css';

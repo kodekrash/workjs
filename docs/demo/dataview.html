@@ -1,0 +1,80 @@
+<div id="dataview-container"></div>
+<style type="text/css">
+	#dataview-container {
+		margin: 20px;
+	}
+	div.state-card {
+		padding: 5px;
+		whitespace: no-wrap;
+	}
+	div.state-card .center {
+		text-align: center;
+	}
+	div.state-card img.flag {
+		margin: 5px;
+		text-align: center;
+	}
+	div.state-card p.name {
+		text-align: center;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+	div.state-card label {
+		float: left;
+		font-size: 8pt;
+		width: 65px;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	var D1 = new WorkJS.widget.dataview( {
+		target: 'dataview-container',
+		columns: 4,
+		request: {
+			module: 'test',
+			method: 'dataview',
+			page: 12
+		},
+		render: function(d) {
+			var rv = $('<div></div>').addClass( 'state-card' );
+			if( d.flag ) {
+				var ri = $('<img />').prop( 'src', 'demo/data/img/' + d.flag ).addClass( 'flag' );
+				rv.append( $('<p class="center"></p>').append( ri ) );
+			}
+			if( d.name ) {
+				rv.append( $('<p class="center"></p>').addClass( 'name' ).append( d.name ) );
+			}
+			if( d.capitol ) {
+				var rp = $('<p></p>');
+				rp.append( $('<label></label>').append( 'Capitol' ) );
+				rp.append( $('<span></span>').append( d.capitol ) );
+				rv.append( rp );
+			}
+			if( d.date ) {
+				var rp = $('<p></p>');
+				rp.append( $('<label></label>').append( 'Statehood' ) );
+				rp.append( $('<span></span>').append( d.date ) );
+				rv.append( rp );
+			}
+			if( d.population ) {
+				var rp = $('<p></p>');
+				rp.append( $('<label></label>').append( 'Population' ) );
+				rp.append( $('<span></span>').append( d.population ) );
+				rv.append( rp );
+			}
+			if( d.size ) {
+				var rp = $('<p></p>');
+				rp.append( $('<label></label>').append( 'Land Area' ) );
+				rp.append( $('<span></span>').append( d.size ) );
+				rv.append( rp );
+			}
+			return rv;
+		},
+		click: function(e) {
+			console.log( e.data.item );
+		}
+	} );
+
+} );
+</script>

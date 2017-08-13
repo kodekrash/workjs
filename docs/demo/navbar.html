@@ -1,0 +1,53 @@
+<div id="navbar-container"></div>
+<div class="body">
+	<p class="demo">This is some example text to demonstrate z-index.</p>
+</div>
+<style type="text/css">
+	#navbar-container {
+		position: absolute;
+		z-index: 4000;
+		top: 10px;
+		left: 10px;
+		height: 40px;
+	}
+	div.body {
+		position: absolute;
+		top: 50px;
+		left: 10px;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	N1 = new WorkJS.widget.navbar( {
+		target: 'navbar-container',
+		callback: function(d) {
+			console.log( 'Nav item click: ', d.data.item );
+		},
+		items: [
+			{
+				uri: 'itemA',
+				caption: 'Item A',
+				items: [
+					{ uri: 'itemA-S1', caption: 'Subitem A1' },
+					{ uri: 'itemA-S2', caption: 'Subitem A2' },
+					{ uri: 'itemA-S3', caption: 'Subitem A3' }
+				]
+			},
+			{
+				uri: 'itemB',
+				caption: 'Item B'
+			},
+			{
+				uri: 'itemC',
+				caption: 'Item C'
+			},
+			{
+				uri: 'itemD',
+				caption: 'Item D'
+			}
+		]
+	} );
+
+} );
+</script>

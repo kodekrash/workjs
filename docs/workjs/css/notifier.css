@@ -1,0 +1,113 @@
+.wjs-notifier {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+.wjs-notifier div.wjs-notifier-message-wrap {
+	background-color: white;
+	border-radius: 8px;
+}
+.wjs-notifier div.wjs-notifier-message-normal {
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 8px;
+	box-shadow: 3px 3px 3px #cdcdcd;
+	color: black;
+}
+.wjs-notifier div.wjs-notifier-message-success {
+	margin: 10px;
+	border: 1px solid darkgreen;
+	border-radius: 8px;
+	box-shadow: 3px 3px 3px #cdcdcd;
+	color: darkgreen;
+}
+.wjs-notifier div.wjs-notifier-message-error {
+	margin: 10px;
+	border: 1px solid maroon;
+	border-radius: 8px;
+	box-shadow: 3px 3px 3px #cdcdcd;
+	color: maroon;
+}
+.wjs-notifier div.wjs-notifier-message-caption {
+	line-height: 24px;
+	text-indent: 10px;
+	border: 1px transparent;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.wjs-notifier div.wjs-notifier-message-normal div.wjs-notifier-message-caption {
+	background-color: rgba(0,0,0,0.3);
+}
+.wjs-notifier div.wjs-notifier-message-success div.wjs-notifier-message-caption {
+	background-color: rgba(0,255,0,0.3);
+}
+.wjs-notifier div.wjs-notifier-message-error div.wjs-notifier-message-caption {
+	background-color: rgba(255,0,0,0.3);
+}
+.wjs-notifier div.wjs-notifier-message-body {
+	padding: 5px;
+	font-size: 9pt;
+}
+.wjs-notifier div.wjs-notifier-message-normal div.wjs-notifier-message-body {
+	background-color: rgba(0,0,0,0.1);
+}
+.wjs-notifier div.wjs-notifier-message-success div.wjs-notifier-message-body {
+	background-color: rgba(0,255,0,0.1);
+}
+.wjs-notifier div.wjs-notifier-message-error div.wjs-notifier-message-body {
+	background-color: rgba(255,0,0,0.1);
+}
+
+/** bar **/
+.wjs-notifier-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+.wjs-notifier-bar p {
+	margin: 0;
+	padding: 0;
+}
+.wjs-notifier-bar div.wjs-notifier-message-wrap {
+	background-color: white;
+}
+.wjs-notifier-bar div.wjs-notifier-message-normal {
+	border-bottom: 1px solid black;
+	color: black;
+	width: 100%;
+	height: 30px;
+}
+.wjs-notifier-bar div.wjs-notifier-message-success {
+	border-bottom: 1px solid darkgreen;
+	color: darkgreen;
+	width: 100%;
+	height: 30px;
+}
+.wjs-notifier-bar div.wjs-notifier-message-error {
+	border-bottom: 1px solid maroon;
+	color: maroon;
+	width: 100%;
+	height: 30px;
+}
+.wjs-notifier-bar div.wjs-notifier-message-caption {
+	line-height: 30px;
+	padding: 0 5px;
+	float: left;
+	font-weight: bold;
+}
+.wjs-notifier-bar div.wjs-notifier-message-body {
+	line-height: 30px;
+	padding: 0 5px;
+}
+.wjs-notifier-bar div.wjs-notifier-message-normal div.wjs-notifier-message-body {
+	background-color: rgba(0,0,0,0.1);
+}
+.wjs-notifier-bar div.wjs-notifier-message-success div.wjs-notifier-message-body {
+	background-color: rgba(0,255,0,0.1);
+}
+.wjs-notifier-bar div.wjs-notifier-message-error div.wjs-notifier-message-body {
+	background-color: rgba(255,0,0,0.1);
+}

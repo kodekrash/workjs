@@ -1,0 +1,63 @@
+<br />
+<p>
+	<label>Sidebar Bubble style</label>
+	<button id="msg-demo-message1">Normal Message</button>
+	<button id="msg-demo-message2">Error Message</button>
+	<button id="msg-demo-message3">Success Message</button>
+</p>
+<br />
+<p>
+	<label>Top Bar style</label>
+	<button id="msg-demo-message1a">Normal Message</button>
+	<button id="msg-demo-message2a">Error Message</button>
+	<button id="msg-demo-message3a">Success Message</button>
+</p>
+<div id="notifier-container1"></div>
+<div id="notifier-container2"></div>
+<style type="text/css">
+	#notifier-container1 {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 205px;
+	}
+	#notifier-container2 {
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	N1 = new WorkJS.widget.notifier( { target: 'notifier-container1', timer: 5 } );
+	
+	$('#msg-demo-message1').click( function() {
+		N1.additem( { caption: 'Normal Message', html: '<p>This is the text of the normal message notification.</p>' } );
+	} );
+	
+	$('#msg-demo-message2').click( function() {
+		N1.additem( { type: 'error', timer: 10, caption: 'Error Message', html: '<p>This is the text of the error message notification.</p>' } );
+	} );
+	
+	$('#msg-demo-message3').click( function() {
+		N1.additem( { type: 'success', caption: 'Success Message', html: '<p>This is the text of the success message notification.</p>' } );
+	} );
+	
+	N2 = new WorkJS.widget.notifier( { target: 'notifier-container2', timer: 5, bar: true } );
+	
+	$('#msg-demo-message1a').click( function() {
+		N2.additem( { caption: 'Normal Message', html: '<p>This is the text of the normal message notification.</p>' } );
+	} );
+	
+	$('#msg-demo-message2a').click( function() {
+		N2.additem( { type: 'error', timer: 10, caption: 'Error Message', html: '<p>This is the text of the error message notification.</p>' } );
+	} );
+	
+	$('#msg-demo-message3a').click( function() {
+		N2.additem( { type: 'success', caption: 'Success Message', html: '<p>This is the text of the success message notification.</p>' } );
+	} );
+
+} );
+</script>

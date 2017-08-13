@@ -1,0 +1,55 @@
+<p>
+	<button id="accordion-demo-add">Add Section</button>
+	<button id="accordion-demo-del">Remove Section 4</button>
+</p>
+<div id="accordion-container"></div>
+<style type="text/css">
+	#accordion-container {
+		position: relative;
+		margin: 20px;
+		width: 500px;
+		height: 240px;
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+	A1 = new WorkJS.widget.accordion( {
+		target: 'accordion-container',
+		items: [
+			{
+				uri: 'sec1',
+				caption: 'Section 1',
+				url: 'demo/data/_lipsum1.html'
+			},
+			{
+				uri: 'sec2',
+				caption: 'Section 2',
+				url: 'demo/data/_lipsum2.html'
+			},
+			{
+				uri: 'sec3',
+				caption: 'Section 3',
+				url: 'demo/data/_lipsum3.html'
+			}
+		]
+	} );
+	
+	$('#accordion-demo-del').hide();
+	
+	$('#accordion-demo-add').click( function() {
+		$('#accordion-demo-del').show();
+		$('#accordion-demo-add').hide();
+		A1.additem( {
+			uri: 'sec4',
+			caption: 'Section 4',
+			html: '<p>This section was added after the widget was rendered.</p>'
+		} );
+	} );
+	
+	$('#accordion-demo-del').click( function() {
+		A1.removeitem( 'sec4' );
+		$('#accordion-demo-add').show();
+		$('#accordion-demo-del').hide();
+	} );
+} );
+</script>

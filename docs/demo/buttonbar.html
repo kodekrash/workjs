@@ -1,0 +1,40 @@
+<div id="buttonbar-container"></div>
+<style type="text/css">
+	#buttonbar-container {
+	}
+</style>
+<script type="text/javascript">
+$( function() {
+
+	var B1 = new WorkJS.widget.buttonbar( {
+		target: 'buttonbar-container',
+		callback: function(d) {
+			console.log( 'Button click: ', d.data.item );
+		},
+		items: [
+			{
+				uri: 'itemA',
+				caption: 'Item A',
+			},
+			{
+				uri: 'itemB',
+				caption: 'Item B',
+				icon: '/workjs/demo/data/up.png'
+			},
+			{
+				uri: 'itemC',
+				caption: 'Item C',
+				callback: function(d) {
+					alert( 'Item C has custom callback: ', d.data.item );
+				}
+			},
+			{
+				uri: 'itemD',
+				caption: 'Item D',
+				disabled: true
+			}
+		]
+	} );
+
+} );
+</script>
