@@ -4,11 +4,6 @@ WorkJS is a suite of jQuery user interface plugins. Unlike most plugins, which r
 
 This code was written in 2010-2011, and most of the functionality can now be found in Bootstrap, Semantic UI, etc. It has been released here for demonstration and reference purposes, and it not intended for production use, as it is not maintained.
 
-Demo
-----
-
-http://code.jameslinden.com/workjs/
-
 Components
 ----------
 
